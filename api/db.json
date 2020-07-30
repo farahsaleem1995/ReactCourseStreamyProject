@@ -4,6 +4,28 @@
       "title": "My stream",
       "description": "This is my first stream",
       "id": 1
+    },
+    {
+      "title": "Another stream",
+      "description": "Here is another stream",
+      "id": 2
+    },
+    {
+      "title": "Auth stream 1 U",
+      "description": "Description of auth stream 1",
+      "id": 3
+    },
+    {
+      "title": "Auth stream 2 U",
+      "description": "Description of auth stream 2",
+      "userId": "109496275041737011204",
+      "id": 4
+    },
+    {
+      "title": "Auth stream 3",
+      "description": "Description of auth stream 3",
+      "userId": "109496275041737011204",
+      "id": 5
     }
   ]
 }

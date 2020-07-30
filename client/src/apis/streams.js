@@ -20,7 +20,7 @@ class StreamsAPI {
   };
 
   editStreamAsync = async (id, data) => {
-    return this.api.put(`/streams/${id}`, data);
+    return this.api.patch(`/streams/${id}`, data);
   };
 
   deleteStreamAsync = async (id) => {

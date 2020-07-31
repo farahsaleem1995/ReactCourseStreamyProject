@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import GoogleAuth from "./GoogleAuth";
@@ -8,11 +8,11 @@ class Header extends React.Component {
   renderCreate = () => {
     if (this.props.isSignedIn) {
       return (
-        <Link to="/streams/new" className="ui item">
+        <NavLink exact to="/streams/new" className="ui item">
           <div>
             <button className="ui gray button tiny">New Stream</button>
           </div>
-        </Link>
+        </NavLink>
       );
     }
   };
@@ -27,11 +27,11 @@ class Header extends React.Component {
         </Link>
 
         <div className="right menu" style={{ marginRight: "50px" }}>
-          <Link to="/" className="ui item">
+          <NavLink exact to="/" className="ui item">
             <div>
               <button className="ui gray button tiny">All Streams</button>
             </div>
-          </Link>
+          </NavLink>
           {this.renderCreate()}
           <div className="ui item">
             <GoogleAuth />

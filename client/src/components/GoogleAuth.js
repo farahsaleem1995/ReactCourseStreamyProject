@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { signIn, signOut } from "../actions";
+import Spinner from "./Spinner";
 
 class GoogleAuth extends React.Component {
   componentDidMount() {
@@ -54,7 +55,7 @@ class GoogleAuth extends React.Component {
         );
 
       default:
-        return <div className="ui active inline loader"></div>;
+        return <Spinner />;
     }
   }
 

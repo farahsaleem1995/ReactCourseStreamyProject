@@ -13,7 +13,12 @@ class StreamListItem extends React.Component {
           >
             EDIT
           </Link>
-          <button className="ui button red">Delete</button>
+          <Link
+            to={`/streams/delete/${this.props.stream.id}`}
+            className="ui button red"
+          >
+            Delete
+          </Link>
         </div>
       );
     }
@@ -25,7 +30,16 @@ class StreamListItem extends React.Component {
         {this.renderAdmin()}
         <i className="huge middle aligned icon camera" />
         <div className="content">
-          <h4>{this.props.stream.title}</h4>
+          <Link
+            to={`streams/${this.props.stream.id}`}
+            className="header"
+            style={{
+              fontSize: "20px",
+              lineHeight: "32px",
+            }}
+          >
+            {this.props.stream.title}
+          </Link>
           <p className="description">{this.props.stream.description}</p>
         </div>
       </div>

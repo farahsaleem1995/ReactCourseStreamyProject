@@ -9,6 +9,7 @@ import StreamEdit from "./streams/StreamEdit";
 import StreamList from "./streams/StreamList";
 import StreamShow from "./streams/StreamShow";
 import history from "../history";
+import PrivateRoute from "../PrivateRoute";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <div className="ui container">
           <Switch>
             <Route path="/" exact component={StreamList} />
-            <Route path="/streams/new" exact component={StreamCreate} />
+            <PrivateRoute path="/streams/new" exact component={StreamCreate} />
             <Route path="/streams/edit/:id" exact component={StreamEdit} />
             <Route path="/streams/delete/:id" exact component={StreamDelete} />
             <Route path="/streams/:id" exact component={StreamShow} />
